@@ -1,0 +1,193 @@
+:root {
+  --main-background-color: #1e202b;
+  --secondry-background-color: #323544;
+  --main-color: #009ad8;
+  --secondry-color: #bfc1c8;
+}
+
+* {
+  font-family: sans-serif;
+  box-sizing: border-box;
+  
+}
+
+body {
+  background-color: var(--secondry-background-color);
+}
+
+/* strat navbar styling */
+.navbar {
+  background-color: var(--main-background-color) !important;
+}
+.navbar .container .navbar-brand .logo .logoText h1 {
+  font-size: 16px;
+  color: white;
+}
+.navbar .container .navbar-brand .logo .logoText p {
+  font-size: 10px;
+  color: var(--secondry-color);
+  margin-bottom: 0;
+}
+
+.navbar .container ul li {
+  margin-right: 10px;
+}
+.navbar .container ul a {
+  color: white !important;
+  border: 2px solid transparent;
+  padding: 2px 25px !important;
+  font-weight: 500;
+  font-size: 14px;
+}
+.navbar .container ul .active {
+  border: 2px solid var(--main-color);
+  color: var(--main-color) !important;
+}
+
+.navbar .container ul a:hover {
+  border: 2px solid var(--main-color);
+  color: var(--main-color) !important;
+}
+
+/* end navbar styling */
+
+/* strat home styling */
+.home {
+  background-image: linear-gradient(
+      to right,
+      rgba(0, 0, 0, 0.5),
+      rgba(0, 0, 0, 0.5)
+    ),
+    url("../media/Clouds.jpeg");
+  background-position: center;
+  background-size: cover;
+}
+
+.home .container {
+  overflow: auto;
+}
+.container button {
+  position: absolute;
+  right: 5px;
+  bottom: 5px;
+  padding: 10px 40px;
+  background-color: var(--main-color) !important;
+  border: none;
+}
+
+.container input {
+  padding: 15px !important;
+  background-color: var(--main-background-color);
+  color: white;
+  border: none !important;
+}
+.container input::placeholder {
+  color: gray;
+}
+.container input:focus {
+  box-shadow: none;
+}
+
+.home .container .row {
+  border-radius: 10px;
+  overflow: hidden;
+}
+.home .container .col-lg-4 {
+  display: flex;
+  flex-direction: column;
+}
+
+.row .item {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.row .item .card-head {
+  background-color: #2d303d;
+  padding: 15px 10px !important;
+}
+.row .item .card-head p {
+  margin: 0;
+  color: rgb(158, 158, 158);
+  font-size: 14px;
+}
+.row .item .card-body {
+  background-color: #323544;
+  padding: 30px 20px;
+  color: white;
+}
+
+.row .item .card-body .temp {
+  font-size: 90px;
+  color: white;
+}
+
+.row .item .card-body .current {
+  width: 100px;
+}
+.row .item .card-body .weather-status {
+  color: var(--main-color);
+  margin-bottom: 15px !important;
+}
+
+.row .item .card-body .wind-details span {
+  display: inline-block;
+  margin-right: 15px;
+  color: white;
+}
+.row .item .card-body .wind-details span img {
+  display: inline-block;
+  margin-right: 5px;
+}
+
+.row .item-2 .card-head {
+  background-color: #222530;
+}
+.row .item-2 .card-body {
+  background-color: #262936;
+  color: white;
+}
+.row .item-3 .card-head {
+  background-color: #2d303d;
+}
+.row .item-3 .card-body {
+  background-color: #323544;
+  color: white;
+}
+
+/* end home styling */
+
+/* start footer styling */
+footer {
+  background-color: var(--secondry-background-color);
+  overflow: auto;
+}
+
+footer p {
+  color: #bfc1c8;
+  font-size: 14px;
+}
+footer .social {
+  display: flex;
+  gap: 10px;
+}
+footer .social span {
+  background-color: var(--main-background-color);
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  transition: 0.5s;
+  font-size: 22px;
+  color: #009ad8;
+}
+
+footer .social span:hover {
+  background-color: var(--main-color);
+  color: white;
+}
+
+/* end footer styling */

@@ -4,7 +4,7 @@
   --main-color: #009ad8;
   --secondry-color: #bfc1c8;
 }
-
+ 
 * {
   font-family: sans-serif;
   box-sizing: border-box;
@@ -19,6 +19,15 @@ body {
 .navbar {
   background-color: var(--main-background-color) !important;
 }
+
+.navbar .container button {
+  padding-left: 0;
+  padding-right: 0;
+}
+.navbar .container button:focus {
+  box-shadow: none;
+}
+
 .navbar .container .navbar-brand .logo .logoText h1 {
   font-size: 16px;
   color: white;
@@ -119,7 +128,7 @@ body {
 }
 
 .row .item .card-body .temp {
-  font-size: 90px;
+  font-size: 50px;
   color: white;
 }
 

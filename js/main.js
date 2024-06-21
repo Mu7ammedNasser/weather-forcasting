@@ -12,14 +12,17 @@ async function forcasting() {
   }
 }
 
-searchInput.addEventListener("input", function() {
+searchInput.addEventListener("input", function () {
   forcasting();
 });
 
 function formatDate(dateStr) {
   let date = new Date(dateStr);
-  let dayName = date.toLocaleDateString('en-US', { weekday: 'long' });
-  let formattedDate = date.toLocaleDateString('en-US', { month: 'long', day: 'numeric' });
+  let dayName = date.toLocaleDateString("en-US", { weekday: "long" });
+  let formattedDate = date.toLocaleDateString("en-US", {
+    month: "long",
+    day: "numeric",
+  });
   return { dayName, formattedDate };
 }
 
@@ -37,8 +40,10 @@ function displayForcasting(arr) {
         </div>
         <div class="card-body">
           <h4>${arr.location.name}</h4>
-          <p class="temp">${arr.current.temp_c}<sup>o</sup>C</p>
-          <img class="current" src="${arr.current.condition.icon}" alt="weather icon">
+          <div class="d-flex justify-content-between px-1 py-2">
+            <p class="temp">${arr.current.temp_c}<sup>o</sup>C</p>
+            <img class="current" src="${arr.current.condition.icon}" alt="weather icon">
+          </div>
           <p class="weather-status">${arr.current.condition.text}</p>
           <div class="wind-details">
             <span><img src="media/icon-umberella.png" alt="umbrella">${arr.current.cloud}%</span>
